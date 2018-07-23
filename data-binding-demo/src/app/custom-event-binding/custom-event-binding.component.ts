@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-custom-event-binding',
   templateUrl: './custom-event-binding.component.html',
   styleUrls: ['./custom-event-binding.component.css']
 })
-export class CustomEventBindingComponent implements OnInit {
+export class CustomEventBindingComponent{
 
-  constructor() { }
+@Output() clicked = new EventEmitter<{color: String, backColor: String}>();
 
-  ngOnInit() {
-  }
+onClick(){
+  this.clicked.emit({color: 'white', backColor: 'brown'});
+}
 
 }

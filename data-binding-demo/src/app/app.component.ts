@@ -10,4 +10,9 @@ export class AppComponent {
     color: 'Black',
     backColor: 'Teal'
   }
+
+  onClicked(parentElementColors: {color: string, backColor: string}){
+    this.parentElement.color = parentElementColors.color;
+    this.parentElement.backColor = parentElementColors.backColor;
+  }
 }
