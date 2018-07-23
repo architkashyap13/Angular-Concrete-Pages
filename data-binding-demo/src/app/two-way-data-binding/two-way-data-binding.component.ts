@@ -7,5 +7,5 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayDataBindingComponent{
 
-  valuetext: number = 10;
+  valuetext: number = 20;
 }
