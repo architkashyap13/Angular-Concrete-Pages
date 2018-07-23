@@ -1,0 +1,11 @@
+<button type="button" (click)="changeVisibleStatus()">Change Visibility</button>
+<p *ngIf="visibleStatus; else other">
+  is it visible !
+</p>
+<ng-template #other>
+  <p>it is not visible !</p>
+</ng-template>
+
+<hr>
+<h3>*ngFor Structural Directive</h3>
+<p *ngFor="let color of colors; let i = index" [ngStyle]="{backgroundColor: color}" [ngClass]="{online: true}">this is in {{color}} color with {{i}} index.</p>
